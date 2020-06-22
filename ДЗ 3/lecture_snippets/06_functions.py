@@ -106,14 +106,9 @@ def elephant_to_free(some_list):
 
 zoo = ['lion', 'elephant', 'monkey', 'skunk', 'horse', 'elephant']
 
-elephant_to_free(zoo)
-print(zoo)
-
-elephant_to_free(zoo)
-print(zoo)
-
-elephant_to_free(zoo)
-print(zoo)
+while zoo.count('elephant'):      #пока в списке есть слон - true делаем функцию освобождения слона
+    elephant_to_free(zoo)
+    print(zoo)
 
 # это т.н. функции с побочными эффектами, они меняют контекст выполнения.
 # можно заблокировать изменение параметров - передать тьюпл
