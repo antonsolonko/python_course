@@ -67,7 +67,6 @@ else:
     print('Тут слона нет...')
 print('Выход из цикла')
 
-
 # Изменять содержимое последовательности, по которой проходит цикл, небезопасно
 zoo_pets = [
     'lion', 'skunk',
@@ -77,7 +76,6 @@ for animal in zoo_pets:
     print(animal)
     del zoo_pets[0]
 print(zoo_pets)
-
 
 # автоматическая распаковка содержимого списка/тьюпла
 
@@ -89,12 +87,12 @@ for element in [(1, 2), (3, 4)]:
     print(a + b)
 
 for (a, b) in [(1, 2), (3, 4)]:
-    print(a+b)
+    print(a + b)
 
 pair_list = [(1, 2), (3, 4), (5, 6)]
 
 for a, b in pair_list:
-    print(a+b)
+    print(a + b)
 
 triple_list = [(1, 2, 3), (4, 5, 6)]
 for a, b, c in triple_list:
@@ -105,7 +103,6 @@ for a, b, c in triple_list:
 for a, b in [(1, 2), (3, 4), (5, 6, 7)]:
     print(a, b)
 
-
 # полезные функции
 
 # for(i=0; i < 10; i++) {
@@ -113,19 +110,21 @@ for a, b in [(1, 2), (3, 4), (5, 6, 7)]:
 #       printf(i, animal);
 # }
 
-for i, animal in enumerate(zoo_pets):
+for i, animal in enumerate(zoo_pets):  # распаковует пару значения: 1)номер элемента и 2)сам элемент
     print(i, animal)
 
 # генерация целочисленных последовательностей
-for i in range(100, 600, 50):
+for i in range(100, 600, 50):  # для переменной i начиная со 100 до 600(не включая) с шагом 50, выводим значения i
+    print(i)
+
+for i in range(10):  # начиная с 0 до 10(не включая) с шагом 1
     print(i)
 
 # НЕ ДЕЛАЙТЕ ТАК!!!!
 zoo_pets = ['lion', 'skunk', 'elephant', 'horse', ]
-for i in range(len(zoo_pets)):
+for i in range(len(zoo_pets)):  # range(len(zoo_pets))) - тафтология, можно использовать enumerate
     animal = zoo_pets[i]
     print(i, animal)
-
 
 # вложенные циклы
 zoo_pets = [
@@ -136,7 +135,6 @@ for animal in zoo_pets:
     for char in animal:
         print(char)
     print(animal)
-
 
 # цикл по словарям
 zoo_pet_mass = {
@@ -152,13 +150,13 @@ for animal in zoo_pet_mass:
 print('Общая масса животных', total_mass)
 
 total_mass = 0
-for animal, mass in zoo_pet_mass.items():
+for animal, mass in zoo_pet_mass.items():  # распаковываем пару: имя, значение
     print(animal, mass)
     total_mass += mass
 print('Общая масса животных', total_mass)
 
 total_mass = 0
-for mass in zoo_pet_mass.values():
+for mass in zoo_pet_mass.values():  # распаковываем только значение
     print(mass)
     total_mass += mass
 print('Общая масса животных', total_mass)
