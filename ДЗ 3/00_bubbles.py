@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import random
+
 import simple_draw as sd  # вызов ф-ии из библиотеки sd.circle() sd.get_point()
 
 sd.resolution = (1200, 600)
@@ -46,8 +48,16 @@ sd.resolution = (1200, 600)
 #         point= sd.get_point(x,y)
 #         bubble(point=point, step=5)
 
-
 # Нарисовать 100 пузырьков в произвольных местах экрана случайными цветами
-# TODO здесь ваш код
+def bubble(point, step):   # ф-я пузырька
+    radius = 50             # изначальный радиус первового пузырька
+    for _ in range(3):      # цикл для рисования трех вложенных пузырьков
+        radius += step      # инкрементируем шаг рисования радиуса
+        sd.circle(center_position=point, radius=radius, color=color, width=2) #ф-я рисиования круга: координаты=центр круга, радиус, толщина линии
+for _ in range(100):
+    point = sd.random_point()
+    step = random.randint(2,10)  # ввожу random затем alt+enter выбираю импорт функции
+    color = sd.random_color()
+    bubble(point=point, step=step)
 
 sd.pause()
