@@ -31,13 +31,21 @@ sd.resolution = (1200, 600)
 #     for _ in range(3):      # цикл для рисования трех вложенных пузырьков
 #         radius += step      # инкрементируем шаг рисования радиуса
 #         sd.circle(center_position=point, radius=radius, width=2) #ф-я рисиования круга: координаты=центр круга, радиус, толщина линии
-# for x in range(100,1101,100):
+# for x in range(100,1001,100):
 #     point = sd.get_point(x, 100)
 #     bubble(point=point, step = 5)
 
-
 # Нарисовать три ряда по 10 пузырьков
-# TODO здесь ваш код
+# def bubble(point, step):   # ф-я пузырька
+#     radius = 50             # изначальный радиус первового пузырька
+#     for _ in range(3):      # цикл для рисования трех вложенных пузырьков
+#         radius += step      # инкрементируем шаг рисования радиуса
+#         sd.circle(center_position=point, radius=radius, width=2) #ф-я рисиования круга: координаты=центр круга, радиус, толщина линии
+# for y in range(100,301,100):
+#     for x in range(100,1001,100):
+#         point= sd.get_point(x,y)
+#         bubble(point=point, step=5)
+
 
 # Нарисовать 100 пузырьков в произвольных местах экрана случайными цветами
 # TODO здесь ваш код
