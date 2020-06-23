@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-import simple_draw as sd
+import simple_draw as sd  # вызов ф-ии из библиотеки sd.circle() sd.get_point()
+
 sd.resolution = (1200, 600)
 
 # Нарисовать пузырек - три вложенных окружностей с шагом 5 пикселей
@@ -19,9 +20,21 @@ sd.resolution = (1200, 600)
 # point = sd.get_point(300,300)  # координаты стартовой точки
 # bubble(point=point,step=10)    # вызываб ф-ю и передаю параметры для стартовой точки и шаг инкрементации радиуса
 
-
 # Нарисовать 10 пузырьков в ряд
-# TODO здесь ваш код
+# for x in range(100,1101,100):
+#     radius = 45
+#     point = sd.get_point(x, 100) # ф-я стартовой точки - Y-ветрикаль статичные координаты, X-вертикаль смещается на 100 пунктов
+#     sd.circle(center_position=point, radius=radius, width=2) #
+#--------------------
+# def bubble(point, step):   # ф-я пузырька
+#     radius = 50             # изначальный радиус первового пузырька
+#     for _ in range(3):      # цикл для рисования трех вложенных пузырьков
+#         radius += step      # инкрементируем шаг рисования радиуса
+#         sd.circle(center_position=point, radius=radius, width=2) #ф-я рисиования круга: координаты=центр круга, радиус, толщина линии
+# for x in range(100,1101,100):
+#     point = sd.get_point(x, 100)
+#     bubble(point=point, step = 5)
+
 
 # Нарисовать три ряда по 10 пузырьков
 # TODO здесь ваш код
@@ -30,5 +43,3 @@ sd.resolution = (1200, 600)
 # TODO здесь ваш код
 
 sd.pause()
-
-
