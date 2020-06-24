@@ -55,7 +55,7 @@ brick_x, brick_y, brick_z = 10, 10, 8
 # brick_x, brick_y, brick_z = 3, 11, 6
 # (просто раскоментировать нужную строку и проверить свой код)
 
-#здесь ваш код
+#здесь ваш код: кирпич xy, zy, xz
 if brick_x <= hole_x or brick_z <= hole_x and brick_y <= hole_y: # прикладываем по стороне y: xy или zy
     print('ДА, xy или zy ')
 elif brick_x <= hole_y or brick_z <= hole_y and brick_y <= hole_x:# поворачиваем и прикладываем по стороне y: xy или zy
