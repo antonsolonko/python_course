@@ -10,5 +10,12 @@
 #   Студенту надо попросить ХХХ.ХХ рублей
 
 educational_grant, expenses = 10000, 12000
-
 # TODO здесь ваш код
+year = 12
+sum = 0
+while year > 0:
+    sum += expenses - educational_grant
+    expenses = expenses * 1.03
+    year -= 1
+sum = round(sum, 2)
+print('Студенту надо попросить', sum, 'рублей')
