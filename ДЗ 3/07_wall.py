@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # (цикл for)
+import random
 import simple_draw as sd
 from simple_draw import Point
 
@@ -26,6 +27,7 @@ for y in range(0,600,50):
         y1 = y + 50
         left_bottom = sd.get_point(x,y)
         right_top = sd.get_point(x1,y1)
-        sd.rectangle(left_bottom=left_bottom,right_top=right_top,color=sd.COLOR_ORANGE,width=1)
+        color_1=sd.random_color()
+        sd.rectangle(left_bottom=left_bottom,right_top=right_top,color=color_1,width=1)
 
 sd.pause()
