@@ -18,7 +18,7 @@ y = 0
 null = 0
 for y in range(0,600,50):
     if null == 0:
-       null = 50
+       null = -50
     else:
         null = 0
     for x in range(null,1201,100):
