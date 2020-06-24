@@ -51,7 +51,7 @@ for name, code in goods.items():          # цикл for по товарам с 
     total_quantity, total_price = 0, 0    # инициализация переменных для подсчета количества и стоимости товара
     list = store[code]                    # получение списка на складе по коду товара
     for position in list:                 # цикл for по списку на складе
-        quantity , price = position.values()
+        quantity, price = position.values()
         total_quantity += quantity        # подсчет количества товара
         total_price += price              # подсчет стоимости товара
-    print('"',name, '-', total_quantity, 'шт,', 'стоимость', total_price, 'руб','"') # вывод на консоль количества и стоимости товара на складе
+    print('"', name, '-', total_quantity, 'шт,', 'стоимость', total_price, 'руб', '"') # вывод на консоль количества и стоимости товара на складе
