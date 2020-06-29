@@ -136,10 +136,10 @@ def hexagon(point, angle, length):
     else:
         sd.line(start_point=point,end_point=last_point_skleika,width=1)
 
-square(point = sd.get_point(400, 400), angle = 15, length = 150)
-triangle(point = sd.get_point(50, 50), angle = 15, length = 150)
-pentagon(point = sd.get_point(100, 350), angle = 15, length = 120)
-hexagon(point = sd.get_point(400, 50), angle = 15, length =100)
+# square(point = sd.get_point(400, 400), angle = 15, length = 150)
+# triangle(point = sd.get_point(50, 50), angle = 15, length = 150)
+# pentagon(point = sd.get_point(100, 350), angle = 15, length = 120)
+# hexagon(point = sd.get_point(400, 50), angle = 15, length =100)
 
 # Часть 2 (делается после зачета первой части)
 #
