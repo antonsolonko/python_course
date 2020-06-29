@@ -20,7 +20,7 @@ import simple_draw as sd
 
 # нарисовать треугольник из точки (300, 300) с длиной стороны 200
 length = 200
-point = sd.get_point(300,300)
+
 
 
 def triangle(point, angle=0,length=50):
@@ -34,7 +34,7 @@ def triangle(point, angle=0,length=50):
     v3.draw()
 
 point_0 = sd.get_point(300,300)
-for angle in range(0, 361, 120):     # От нуля до полного оборота 360 градусов, рисую треугольник с шагом в Х градусов
+for angle in range(0, 360, 120):     # От нуля до полного оборота 360 градусов, рисую треугольник с шагом в Х градусов
     triangle(point=point_0, angle=angle)
 
 # определить функцию рисования треугольника из заданной точки с заданным наклоном

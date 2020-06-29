@@ -30,62 +30,42 @@ import simple_draw as sd
 
 # TODO здесь ваш код
 def triangle(point, angle, length):
-    v1 = sd.get_vector(start_point = point, angle = angle, length = length, width = 1)
-    v1.draw()
+    last_point_skleika = point
+    for x in range(0,360 - 120,120):
+        v1 = sd.get_vector(start_point=point,angle=angle + x,length=length,width=1)
+        v1.draw()
+        point = v1.end_point
+    else:
+        sd.line(start_point=point,end_point=last_point_skleika,width=1)
 
-    v2 = sd.get_vector(start_point = v1.end_point, angle = angle + 120, length = length, width = 1)
-    v2.draw()
-
-    v3 = sd.get_vector(start_point = v2.end_point, angle = angle + 240, length = length, width = 1)
-    v3.draw()
 
 def square(point, angle, length):
-    v1 = sd.get_vector(start_point = point, angle = angle, length = length, width = 1)
-    v1.draw()
-
-    v2 = sd.get_vector(start_point = v1.end_point , angle = angle + 90, length = length, width = 1)
-    v2.draw()
-
-    v3 = sd.get_vector(start_point = v2.end_point, angle = angle + 180, length = length, width = 1)
-    v3.draw()
-
-    v4 = sd.get_vector(start_point = v3.end_point, angle = angle + 270, length = length, width = 1)
-    v4.draw()
+    last_point_skleika = point
+    for x in range(0,360 - 90,90):
+        v1 = sd.get_vector(start_point=point,angle=angle + x,length=length,width=1)
+        v1.draw()
+        point = v1.end_point
+    else:
+        sd.line(start_point=point,end_point=last_point_skleika,width=1)
 
 def pentagon(point, angle, length):
-    v1 = sd.get_vector(start_point = point, angle = angle, length = length, width =1)
-    v1.draw()
+    last_point_skleika = point
+    for x in range(0,360 - 72,72):
+        v1 = sd.get_vector(start_point=point,angle=angle + x,length=length,width=1)
+        v1.draw()
+        point = v1.end_point
+    else:
+        sd.line(start_point=point,end_point=last_point_skleika,width=1)
 
-    v2 = sd.get_vector(start_point = v1.end_point, angle = angle + 72, length = length, width = 1)
-    v2.draw()
-
-    v3 = sd.get_vector(start_point = v2.end_point, angle= angle + 144, length = length, width = 1)
-    v3.draw()
-
-    v4 = sd.get_vector(start_point = v3.end_point, angle= angle + 216, length = length, width = 1)
-    v4.draw()
-
-    v5 = sd.get_vector(start_point = v4.end_point, angle=angle + 288, length = length, width = 1)
-    v5.draw()
 
 def hexagon(point, angle, length):
-    v1 = sd.get_vector(start_point = point, angle = angle, length = length, width = 1)
-    v1.draw()
-
-    v2 = sd.get_vector(start_point = v1.end_point, angle = angle + 60, length = length, width = 1)
-    v2.draw()
-
-    v3 = sd.get_vector(start_point = v2.end_point, angle = angle + 120, length = length, width = 1)
-    v3.draw()
-
-    v4 = sd.get_vector(start_point = v3.end_point, angle= angle + 180, length = length, width = 1)
-    v4.draw()
-
-    v5 = sd.get_vector(start_point = v4.end_point, angle = angle + 240, length = length, width = 1)
-    v5.draw()
-
-    v6 = sd.get_vector(start_point = v5.end_point, angle = angle + 300, length = length, width = 1)
-    v6.draw()
+    last_point_skleika = point
+    for x in range(0,360 - 60,60):
+        v1 = sd.get_vector(start_point=point,angle=angle + x,length=length,width=1)
+        v1.draw()
+        point = v1.end_point
+    else:
+        sd.line(start_point=point,end_point=last_point_skleika,width=1)
 
 
 square(point = sd.get_point(400, 400), angle = 15, length = 150)
@@ -98,6 +78,9 @@ hexagon(point = sd.get_point(400, 50), angle = 15, length =100)
 # Попробуйте прикинуть обьем работы, если нужно будет внести изменения в этот код.
 # Скажем, связывать точки не линиями, а дугами. Или двойными линиями. Или рисовать круги в угловых точках. Или...
 # А если таких функций не 4, а 44?
+
+# =============== Нужно отдельно выделить функцию соединения точек, то есть тип соединения.
+# Круг в угловой точке-можно по номеру угла в фигуре - проверка или рисуем круг по координатам или возвращаем None
 
 # Часть 2 (делается после зачета первой части)
 #
